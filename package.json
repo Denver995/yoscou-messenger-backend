@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Denver995/yoscou-messenger-backend/issues"
   },
-  "homepage": "https://github.com/Denver995/yoscou-messenger-backend#readme"
+  "homepage": "https://github.com/Denver995/yoscou-messenger-backend#readme",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.7"
+  }
 }
