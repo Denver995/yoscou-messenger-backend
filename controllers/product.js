@@ -2,10 +2,10 @@ const Product = require('../models/product');
 
 exports.createProduct = (req, res, next) => {
 	const product = new Product({ 
-		name: req.body.productname,
-		description: req.body.description,
-		type: req.body.type,
-		id: req.body.id,
+		name: req.productname,
+		description: req.description,
+		type: req.type,
+		productId: req.productId,
 	});
 
 	product.save().then(() => {
@@ -50,10 +50,10 @@ exports.getProductById = (req, res, next) => {
 
 exports.updateProduct = (req, res, next) => {
 	const product = new Product({
-		name: req.body.productname,
-		description: req.body.description,
-		type: req.body.type,
-		id: req.body.id,
+		name: req.productname,
+		description: req.description,
+		type: req.type,
+		productId: req.id,
 	});
 
 	Product.updateOne({_id: req.param.id}, product).then(
