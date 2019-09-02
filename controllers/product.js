@@ -1,7 +1,7 @@
 const Product = require('../models/product');
 
 exports.createProduct = (req, res, next) => {
-	const product = new Product({ 
+	const product = new Product({
 		name: req.productname,
 		description: req.description,
 		type: req.type,
@@ -14,21 +14,19 @@ exports.createProduct = (req, res, next) => {
 		});
 		console.log(product);
 	}).catch((error) => {
-		res.status(400).json({
-			error: error
-		});
+		res.status(400).send(error);
 	});
 };
 
-exports.getAllProduct = (req, res, next) => {
+exports.getAllProduct = (req, res) => {
 	Product.find().then(
 		(products) => {
 			console.log(products);
-			res.status(200).json(products);
+			res.status(200).send(products);
 	}).catch(
 		(error) => {
 			res.status(400).json({
-				error: error
+				message: error
 			});
 		}
 	);

@@ -5,7 +5,8 @@ const bodyParser = require('body-parser');
 
 //import Route
 const userRoutes = require('./routes/user');
-const productRoutes = require('./routes/product');
+//const productRoutes = require('./routes/product');
+const blogPostRoutes =  require('./routes/blogPost');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const app = express();
 
@@ -32,6 +33,6 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }).then((db) =>
 
 //Route MiddleWare
 app.use('/api/auth', userRoutes);
-app.use('/api/product', productRoutes);
+app.use('/api/blog', blogPostRoutes);
 
 module.exports = app;

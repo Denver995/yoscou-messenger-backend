@@ -11,10 +11,10 @@ exports.singupValidation = (data) => {
 	return Joi.validate(data, schema);
 };
 
-exports.singinValidation = (data) => {
+exports.loginValidation = (data) => {
 
 	const schema = {
-		username: Joi.string().min(6).required(),
+		email: Joi.string().min(6).required().email(),
 		password: Joi.string().min(6).required(),
 	}
 	return Joi.validate(data, schema);

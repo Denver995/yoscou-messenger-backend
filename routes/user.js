@@ -8,8 +8,8 @@ router.post('/singup', userCtrl.singup);
 //get all the users
 router.get('/', userCtrl.getAllUser);
 
-//get a single user
-router.get('/login', userCtrl.login);
+//login
+router.post('/login', userCtrl.login);
 
 //update a user
 router.put('/:id', userCtrl.updateUser);
