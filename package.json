@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Denver995/yoscou-messenger-backend#readme",
   "dependencies": {
     "@hapi/joi": "^15.1.0",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "body-parse": "^0.1.0",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
